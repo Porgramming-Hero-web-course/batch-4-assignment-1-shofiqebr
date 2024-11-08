@@ -15,12 +15,12 @@ There are a few different types of Type Guards in TypeScript:
 The `typeof` operator is great for checking primitive types like `string`, `number`, `boolean`, etc. It’s simple but limited to primitive types only.
 
 **Example:**
-<!-- ```typescript -->
+```typescript
 function doubleValue(value: string | number) {
   if (typeof value === "number") {
-    return value * 2; // TypeScript knows `value` is a number here
+    return value * 2;
   } else {
-    return value + value; // TypeScript knows `value` is a string here
+    return value + value; 
   }
 }
 
@@ -68,9 +68,9 @@ function isFish(animal: Fish | Bird): animal is Fish {
 
 function move(animal: Fish | Bird) {
   if (isFish(animal)) {
-    animal.swim(); // TypeScript knows animal is a Fish
+    animal.swim(); 
   } else {
-    animal.fly(); // TypeScript knows animal is a Bird
+    animal.fly(); 
   }
 }
 ### 4. in Operator Type Guard
@@ -82,8 +82,8 @@ type Boat = { sail: () => void };
 
 function operate(vehicle: Car | Boat) {
   if ("drive" in vehicle) {
-    vehicle.drive(); // TypeScript knows vehicle is a Car
+    vehicle.drive(); 
   } else {
-    vehicle.sail(); // TypeScript knows vehicle is a Boat
+    vehicle.sail(); 
   }
 }

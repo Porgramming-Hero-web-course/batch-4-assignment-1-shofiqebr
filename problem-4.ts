@@ -1,8 +1,8 @@
 
 
-{
 
-    type CircleShape = {
+
+    type Circle  = {
         shape : 'circle' ;
         radius : number;
 
@@ -13,21 +13,20 @@
         height : number
 
     }
-   const calculateShapeArea = (item : CircleShape | Rectangle) => {
+   const calculateShapeArea  = (item : Circle | Rectangle) : number => {
   if ( item.shape === 'circle' ) {
-    return Math.PI * item.radius * item.radius
+    return parseFloat((Math.PI * item.radius * item.radius).toFixed(2))
   }else {
-    return item.height * item.width
+    return parseFloat((item.height * item.width).toFixed(2))
   }
    }
 
    const circleArea = calculateShapeArea({ shape: "circle", radius: 5 });
-  console.log(circleArea)
+
 
   const rectangleArea = calculateShapeArea({
     shape: "rectangle",
     width: 4,
     height: 6,
   });
-  console.log(rectangleArea)
-}
+ 
