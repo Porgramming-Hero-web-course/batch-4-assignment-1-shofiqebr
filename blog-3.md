@@ -15,7 +15,7 @@ There are a few different types of Type Guards in TypeScript:
 The `typeof` operator is great for checking primitive types like `string`, `number`, `boolean`, etc. It’s simple but limited to primitive types only.
 
 **Example:**
-```typescript
+<!-- ```typescript -->
 function doubleValue(value: string | number) {
   if (typeof value === "number") {
     return value * 2; // TypeScript knows `value` is a number here
