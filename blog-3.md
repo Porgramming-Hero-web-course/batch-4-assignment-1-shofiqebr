@@ -27,7 +27,7 @@ function doubleValue(value: string | number) {
 console.log(doubleValue(5)); // 10
 console.log(doubleValue("Hello")); // "HelloHello"
 
-2. instanceof Type Guard
+### 2. instanceof Type Guard
 The instanceof operator is useful for checking if an object is an instance of a specific class. This is handy when working with classes or custom types.
 
 
@@ -55,7 +55,7 @@ const myDog = new Dog();
 console.log(speak(myDog)); // "Woof!"
 
 
-3. Custom Type Guards (User-Defined Type Guards)
+### 3. Custom Type Guards (User-Defined Type Guards)
 
 Sometimes, we need more complex checks. In these cases, we can write a custom Type Guard function that returns true or false based on whether a variable is of a specific type. To make a function a Type Guard, its return type should be formatted as variableName is Type.
 
@@ -73,7 +73,7 @@ function move(animal: Fish | Bird) {
     animal.fly(); // TypeScript knows animal is a Bird
   }
 }
-4. in Operator Type Guard
+### 4. in Operator Type Guard
 
 The in operator checks if an object has a particular property. This is especially useful when working with objects with overlapping properties.
 
